@@ -1,5 +1,10 @@
 # Turborepo starter
 
+
+## install nginx
+sudo dnf install nginx -y
+
+
 This Turborepo starter is maintained by the Turborepo core team.
 
 ## Using this example
