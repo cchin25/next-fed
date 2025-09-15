@@ -12,6 +12,7 @@ This makes it an ideal starting point for **federal, enterprise, or private clou
 ## 🔒 Features
 
 - ✅ Deploy seamlessly to **private cloud** or **air-gapped** environments  
+- ✅ **Orchestration** agnostic
 - ✅ **SSL enabled** out of the box  
 - ✅ Built-in **mTLS support** for secure service communication  
 - ✅ Fully **containerized** for consistent, portable deployments  
