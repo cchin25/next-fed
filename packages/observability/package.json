@@ -1,0 +1,21 @@
+{
+  "name": "@repo/observability",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/api-logs": "^0.205.0",
+    "@opentelemetry/instrumentation": "^0.205.0",
+    "@opentelemetry/sdk-logs": "^0.205.0",
+    "@opentelemetry/sdk-trace-node": "^2.1.0",
+    "@vercel/otel": "^1.13.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "next": "^15.5.0"
+  }
+}
