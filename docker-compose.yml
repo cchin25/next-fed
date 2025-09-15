@@ -1,0 +1,31 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    restart: always
+    networks:
+      - app_network
+  api:
+    container_name: nginx
+    build:
+      context: ./packages/nginx
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 443:443
+    depends_on:
+      - web
+    networks:
+      - app_network
+    volumes:
+      - /etc/ssl/certs/tls.crt:/etc/nginx/ssl/tls.crt
+      - /etc/ssl/certs/tls.key:/etc/nginx/ssl/tls.key
+      - /etc/ssl/certs/ca-bundle.pem:/etc/nginx/ssl/ca-bundle.pem
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  app_network:
+    external: false
