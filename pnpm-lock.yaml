@@ -57,9 +57,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@repo/next-config':
+        specifier: workspace:*
+        version: link:../../packages/next-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@t3-oss/env-nextjs':
+        specifier: ^0.13.8
+        version: 0.13.8(typescript@5.9.2)(zod@4.1.8)
       next:
         specifier: ^15.5.0
         version: 15.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
